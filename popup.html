@@ -12,7 +12,7 @@
         font-family: Arial, sans-serif;
         font-size: 14px;
         width: 300px;
-        height: 280px;
+        height: 380px;
         font-family: cursive;
         display: flex;
         flex-direction: column;
@@ -183,6 +183,18 @@
           padding-top: 20px;
           user-select: none;
         }
+        .recentPassword{
+          font-size: 1rem;
+        }
+        .empty{
+          color: grey;
+        }
+        #clear{
+          color: orangered;
+          cursor: pointer;
+          font-size: 1.3rem;
+          padding: 5px;
+        }
         input{
           cursor: pointer;
         }
@@ -214,6 +226,7 @@
       <div id="recentPasswordsContainer">
         
       </div>
+      <i class="fa-solid fa-trash-alt" id="clear"></i>
     </div>
   </body>
 </html>

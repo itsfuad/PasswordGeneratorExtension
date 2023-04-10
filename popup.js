@@ -75,6 +75,7 @@ const generateButton = document.getElementById('generateButton');
 const lenLabel = document.getElementById('lenLabel');
 const passLen = document.getElementById('passLen');
 const recentBtn = document.getElementById('recentBtn');
+const clear = document.getElementById('clear');
 const includeNumbers = document.getElementById('includeNumbers');
 const includeSymbols = document.getElementById('includeSymbols');
 const includeUppercase = document.getElementById('includeUppercase');
@@ -171,4 +172,9 @@ recentBtn.addEventListener('click', () => {
 document.querySelector('.back').addEventListener('click', () => {
     document.querySelector('.generatorContainer').classList.remove('hide');
     document.querySelector('.recent').classList.add('hide');
+});
+
+clear.addEventListener('click', () => {
+    localStorage.removeItem('recentPasswords');
+    document.querySelector('.back').click();
 });
