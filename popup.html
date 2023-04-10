@@ -36,7 +36,6 @@
       }
 
       input[type=range] {
-        height: 24px;
         -webkit-appearance: none;
         margin: 10px 0;
         width: 100%;
@@ -180,6 +179,13 @@
         .recent{
           position: absolute;
         }
+        .checkboxContainer{
+          padding-top: 20px;
+          user-select: none;
+        }
+        input{
+          cursor: pointer;
+        }
     </style>
   </head>
   <body>
@@ -187,8 +193,19 @@
       <div id="recentBtn"><i class="fa-solid fa-history"></i></div>
       <div class="title">Password Generator <i class="fa-solid fa-key"></i></div>
       <div id="show">----------</div>
-      <label for="passLen" id="lenLabel">Password Length: 8</label>
-      <input type="range" name="passwordLength" id="passLen" value="8" min="8" max="20">
+      <div class="checkboxContainer">
+        <input type="checkbox" name="includeNumbers" id="includeNumbers">
+        <label for="includeNumbers">Include Numbers</label>
+        <input type="checkbox" name="includeSymbols" id="includeSymbols">
+        <label for="includeSymbols">Include Symbols</label>
+        <input type="checkbox" name="includeUppercase" id="includeUppercase">
+        <label for="includeUppercase">Include Uppercase</label>
+        <input type="checkbox" name="includeLowercase" id="includeLowercase">
+        <label for="includeLowercase">Include Lowercase</label>
+      </div>
+      <br>
+      <label for="passLen" id="lenLabel"></label>
+      <input type="range" name="passwordLength" id="passLen"min="8" max="20">
       <button id="generateButton">Generate</button>
     </div>
     <div class="recent hide">
