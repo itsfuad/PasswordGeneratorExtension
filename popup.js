@@ -153,13 +153,11 @@ recentBtn.addEventListener('click', () => {
     //load recent passwords
     const recentPasswords = JSON.parse(localStorage.getItem('recentPasswords')) || [];
     
-
-
     const recentPasswordsContainer = document.getElementById('recentPasswordsContainer');
+    recentPasswordsContainer.innerHTML = '';
     if (recentPasswords.length === 0) {
         recentPasswordsContainer.innerHTML = '<p class="empty">No recent passwords</p>';
     }
-    recentPasswordsContainer.innerHTML = '';
     recentPasswords.forEach((password) => {
         const recentPassword = document.createElement('div');
         recentPassword.classList.add('recentPassword');
