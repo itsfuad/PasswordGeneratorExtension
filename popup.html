@@ -4,201 +4,7 @@
     <title>Password Generator</title>
     <script defer src="./fontawesome.js"></script>
     <script defer src="./popup.js"></script>
-    <style>
-      :root{
-        --button-color: #0099FF;
-      }
-      body, .generatorContainer, .recent{
-        font-family: Arial, sans-serif;
-        font-size: 14px;
-        width: 300px;
-        height: 380px;
-        font-family: cursive;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-        align-items: center;
-        opacity: 1;
-        visibility: visible;
-        transition: 100ms ease-in-out;
-      }
-      input[type="range"] {
-        width: 100%;
-        margin: 10px 0;
-      }
-      button {
-        background-color: var(--button-color);
-        color: white;
-        padding: 10px;
-        border: none;
-        border-radius: 10px;
-        cursor: pointer;
-      }
-
-      input[type=range] {
-        -webkit-appearance: none;
-        margin: 10px 0;
-        width: 100%;
-        }
-        input[type=range]:focus {
-        outline: none;
-        }
-        input[type=range]::-webkit-slider-runnable-track {
-        width: 100%;
-        height: 5px;
-        cursor: pointer;
-        animate: 0.2s;
-        box-shadow: 0px 0px 0px #000000;
-        background: #ADD9FF;
-        border-radius: 1px;
-        border: 0px solid #000000;
-        }
-        input[type=range]::-webkit-slider-thumb {
-        box-shadow: 0px 0px 0px #000000;
-        height: 18px;
-        width: 18px;
-        border-radius: 25px;
-        background: var(--button-color);
-        cursor: pointer;
-        -webkit-appearance: none;
-        margin-top: -6.5px;
-        }
-        input[type=range]:focus::-webkit-slider-runnable-track {
-        background: #ADD9FF;
-        }
-        input[type=range]::-moz-range-track {
-        width: 100%;
-        height: 5px;
-        cursor: pointer;
-        animate: 0.2s;
-        box-shadow: 0px 0px 0px #000000;
-        background: #ADD9FF;
-        border-radius: 1px;
-        border: 0px solid #000000;
-        }
-        input[type=range]::-moz-range-thumb {
-        box-shadow: 0px 0px 0px #000000;
-        height: 18px;
-        width: 18px;
-        border-radius: 25px;
-        background: var(--button-color);
-        cursor: pointer;
-        }
-        input[type=range]::-ms-track {
-        width: 100%;
-        height: 5px;
-        cursor: pointer;
-        animate: 0.2s;
-        background: transparent;
-        border-color: transparent;
-        color: transparent;
-        }
-        input[type=range]::-ms-fill-lower {
-        background: #ADD9FF;
-        border: 0px solid #000000;
-        border-radius: 2px;
-        box-shadow: 0px 0px 0px #000000;
-        }
-        input[type=range]::-ms-fill-upper {
-        background: #ADD9FF;
-        border: 0px solid #000000;
-        border-radius: 2px;
-        box-shadow: 0px 0px 0px #000000;
-        }
-        input[type=range]::-ms-thumb {
-        margin-top: 1px;
-        box-shadow: 0px 0px 0px #000000;
-        border: 0px solid #2497E3;
-        height: 18px;
-        width: 18px;
-        border-radius: 25px;
-        background: var(--button-color);
-        cursor: pointer;
-        }
-        input[type=range]:focus::-ms-fill-lower {
-        background: #ADD9FF;
-        }
-        input[type=range]:focus::-ms-fill-upper {
-        background: #ADD9FF;
-        }
-
-        .title{
-            font-size: 1.4rem;
-            font-family: cursive;
-            color: var(--button-color);
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            flex-direction: row;
-            gap: 5px;
-            padding: 7px;
-        }
-
-        #show{
-            font-size: 1.3rem;
-            text-align: center;
-        }
-        i{
-          color: var(--button-color);
-        }
-        #recentBtn{
-          position: absolute;
-          top: 5px;
-          right: 5px;
-          cursor: pointer;
-          font-size: 1.5rem;
-        }
-        #recentPasswordsContainer{
-          display:flex;
-          flex-direction: column;
-          justify-content: flex-start;
-          align-items: center;
-          overflow: scroll;
-        }
-        #recentPasswordsContainer::-webkit-scrollbar{
-          width: 0;
-        }
-
-        .generatorContainer{
-          padding: 20px;
-        }
-
-        .fa-arrow-left{
-          cursor: pointer;
-          border-radius: 25px;
-          padding: 5px;
-          position: absolute;
-          top: 5px;
-          left: 5px;
-          font-size: 1.5rem;
-        }
-        .hide{
-          opacity: 0;
-          visibility: hidden;
-        }
-        .recent{
-          position: absolute;
-        }
-        .checkboxContainer{
-          padding-top: 20px;
-          user-select: none;
-        }
-        .recentPassword{
-          font-size: 1rem;
-        }
-        .empty{
-          color: grey;
-        }
-        #clear{
-          color: orangered;
-          cursor: pointer;
-          font-size: 1.3rem;
-          padding: 5px;
-        }
-        input{
-          cursor: pointer;
-        }
-    </style>
+    <link rel="stylesheet" href="./style.css">
   </head>
   <body>
     <div class="generatorContainer">
@@ -206,14 +12,34 @@
       <div class="title">Password Generator <i class="fa-solid fa-key"></i></div>
       <div id="show">----------</div>
       <div class="checkboxContainer">
-        <input type="checkbox" name="includeNumbers" id="includeNumbers">
-        <label for="includeNumbers">Include Numbers</label>
-        <input type="checkbox" name="includeSymbols" id="includeSymbols">
-        <label for="includeSymbols">Include Symbols</label>
-        <input type="checkbox" name="includeUppercase" id="includeUppercase">
-        <label for="includeUppercase">Include Uppercase</label>
-        <input type="checkbox" name="includeLowercase" id="includeLowercase">
-        <label for="includeLowercase">Include Lowercase</label>
+        <div class="field-checkers">
+          <input type="checkbox" name="includeNumbers" id="includeNumbers">
+          <label for="includeNumbers">
+            <div class="textContainer">Include Numbers</div>
+            <div class="toggleButton"></div>
+          </label>
+        </div>
+        <div class="field-checkers">
+          <input type="checkbox" name="includeSymbols" id="includeSymbols">
+          <label for="includeSymbols">
+            <div class="textContainer">Include Symbols</div>
+            <div class="toggleButton"></div>
+          </label>
+        </div>
+        <div class="field-checkers">
+          <input type="checkbox" name="includeUppercase" id="includeUppercase">
+          <label for="includeUppercase">
+            <div class="textContainer">Include Uppercase</div>
+            <div class="toggleButton"></div>
+          </label>
+        </div>
+        <div class="field-checkers">
+          <input type="checkbox" name="includeLowercase" id="includeLowercase">
+          <label for="includeLowercase">
+            <div class="textContainer">Include Lowercase</div>
+            <div class="toggleButton"></div>
+          </label>
+        </div>
       </div>
       <br>
       <label for="passLen" id="lenLabel"></label>
