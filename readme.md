@@ -2,8 +2,7 @@
 
 This is a Chrome extension that generates passwords of varying lengths and displays the last 10 generated passwords.
 
-![Password Generator Interface Screenshot](ui1.png)
-![Password Generator Interface Screenshot](ui2.png)
+![Password Generator Interface](cover.png)
 
 ## Features
 
