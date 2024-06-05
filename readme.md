@@ -2,7 +2,7 @@
 
 This is a Chrome extension that generates passwords of varying lengths and displays the last 10 generated passwords.
 
-![Password Generator Interface](cover.png)
+![Password Generator Interface Screenshot](cover.png)
 
 ## Features
 
@@ -37,5 +37,6 @@ The last 10 generated passwords are displayed in the "Htstory" button on the top
 If you find any bugs or have suggestions for improving the Password Generator Chrome Extension, please open an issue on GitHub or submit a pull request.
 
 ## License
+
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.

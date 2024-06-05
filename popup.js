@@ -29,7 +29,7 @@ function generatePassword(length) {
     return [true, password];
 }
 
-let infoTimeout = undefined;
+let infoTimeout = 0;
 
 // Generate a new password and display it in the input field
 function generateNewPassword() {
@@ -55,16 +55,12 @@ function generateNewPassword() {
     }
     localStorage.setItem('recentPasswords', JSON.stringify(recentPasswords));
 
-    
-
-    //generateButton.style.backgroundColor = 'lime';
     generateButton.textContent = 'Copied!';
     //clear info after 3 seconds
     if (infoTimeout) {
         clearTimeout(infoTimeout);
     }
     infoTimeout = setTimeout(() => {
-        //generateButton.style.backgroundColor = 'var(--button-color)';
         generateButton.textContent = 'Generate';
         show.textContent = '----------';
     }, 2000);

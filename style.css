@@ -10,11 +10,10 @@ body {
 body,
 .generatorContainer,
 .recent {
-  font-family: Arial, sans-serif;
   font-size: 14px;
   width: 300px;
   height: 380px;
-  font-family: cursive;
+  font-family: cursive, Arial, sans-serif;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -22,11 +21,6 @@ body,
   opacity: 1;
   visibility: visible;
   transition: 100ms ease-in-out;
-}
-
-input[type=range] {
-  width: 100%;
-  margin: 10px 0;
 }
 
 button {
@@ -53,7 +47,7 @@ input[type=range]::-webkit-slider-runnable-track {
   width: 100%;
   height: 5px;
   cursor: pointer;
-  animate: 0.2s;
+  animation-duration: 0.2s;
   box-shadow: 0px 0px 0px #000000;
   background: #18293b;
   border-radius: 3px;
@@ -79,7 +73,7 @@ input[type=range]::-moz-range-track {
   width: 100%;
   height: 5px;
   cursor: pointer;
-  animate: 0.2s;
+  animation-duration: 0.2s;
   box-shadow: 0px 0px 0px #000000;
   background: #18293b;
   border-radius: 3px;
@@ -99,7 +93,7 @@ input[type=range]::-ms-track {
   width: 100%;
   height: 5px;
   cursor: pointer;
-  animate: 0.2s;
+  animation-duration: 0.2s;
   background: transparent;
   border-color: transparent;
   color: transparent;
@@ -251,7 +245,6 @@ input {
   width: 0;
 }
 .field-checkers label {
-  width: max-content;
   display: flex;
   flex-direction: row;
   align-items: center;

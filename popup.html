@@ -1,58 +1,60 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <title>Password Generator</title>
-    <script defer src="./fontawesome.js"></script>
-    <script defer src="./popup.js"></script>
-    <link rel="stylesheet" href="./style.css">
-  </head>
-  <body>
-    <div class="generatorContainer">
-      <div id="recentBtn"><i class="fa-solid fa-history"></i></div>
-      <div class="title">Password Wiz <i class="fa-solid fa-key"></i></div>
-      <div id="show">----------</div>
-      <div class="checkboxContainer">
-        <div class="field-checkers">
-          <input type="checkbox" name="includeNumbers" id="includeNumbers">
-          <label for="includeNumbers">
-            <div class="textContainer">Include Numbers</div>
-            <div class="toggleButton"></div>
-          </label>
-        </div>
-        <div class="field-checkers">
-          <input type="checkbox" name="includeSymbols" id="includeSymbols">
-          <label for="includeSymbols">
-            <div class="textContainer">Include Symbols</div>
-            <div class="toggleButton"></div>
-          </label>
-        </div>
-        <div class="field-checkers">
-          <input type="checkbox" name="includeUppercase" id="includeUppercase">
-          <label for="includeUppercase">
-            <div class="textContainer">Include Uppercase</div>
-            <div class="toggleButton"></div>
-          </label>
-        </div>
-        <div class="field-checkers">
-          <input type="checkbox" name="includeLowercase" id="includeLowercase">
-          <label for="includeLowercase">
-            <div class="textContainer">Include Lowercase</div>
-            <div class="toggleButton"></div>
-          </label>
-        </div>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Password Generator</title>
+  <script defer src="./fontawesome.min.js"></script>
+  <script defer src="./popup.js"></script>
+  <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+  <div class="generatorContainer">
+    <div id="recentBtn"><i class="fa-solid fa-history"></i></div>
+    <div class="title">Password Wiz <i class="fa-solid fa-key"></i></div>
+    <div id="show">----------</div>
+    <div class="checkboxContainer">
+      <div class="field-checkers">
+        <input type="checkbox" name="includeNumbers" id="includeNumbers">
+        <label for="includeNumbers">
+          <div class="textContainer">Include Numbers</div>
+          <div class="toggleButton"></div>
+        </label>
       </div>
-      <br>
-      <label for="passLen" id="lenLabel"></label>
-      <input type="range" name="passwordLength" id="passLen"min="8" max="20">
-      <button id="generateButton">Generate</button>
-    </div>
-    <div class="recent hide">
-      <i class="fa-solid fa-arrow-left back"></i>
-      <div class="title">Recent Passwords<i class="fa-solid fa-lock"></i></div>
-      <div id="recentPasswordsContainer">
-        
+      <div class="field-checkers">
+        <input type="checkbox" name="includeSymbols" id="includeSymbols">
+        <label for="includeSymbols">
+          <div class="textContainer">Include Symbols</div>
+          <div class="toggleButton"></div>
+        </label>
       </div>
-      <i class="fa-solid fa-trash-alt" id="clear"></i>
+      <div class="field-checkers">
+        <input type="checkbox" name="includeUppercase" id="includeUppercase">
+        <label for="includeUppercase">
+          <div class="textContainer">Include Uppercase</div>
+          <div class="toggleButton"></div>
+        </label>
+      </div>
+      <div class="field-checkers">
+        <input type="checkbox" name="includeLowercase" id="includeLowercase">
+        <label for="includeLowercase">
+          <div class="textContainer">Include Lowercase</div>
+          <div class="toggleButton"></div>
+        </label>
+      </div>
     </div>
-  </body>
+    <br>
+    <label for="passLen" id="lenLabel"></label>
+    <input type="range" name="passwordLength" id="passLen"min="8" max="20">
+    <button id="generateButton">Generate</button>
+  </div>
+  <div class="recent hide">
+    <i class="fa-solid fa-arrow-left back"></i>
+    <div class="title">Recent Passwords<i class="fa-solid fa-lock"></i></div>
+    <div id="recentPasswordsContainer">
+      
+    </div>
+    <i class="fa-solid fa-trash-alt" id="clear"></i>
+  </div>
+</body>
 </html>
